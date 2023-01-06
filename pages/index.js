@@ -1,4 +1,6 @@
+import { gql } from "@apollo/client";
 import client from "client";
+
 
 export default function Home(props) {
   console.log("PROPS: ", props);
@@ -6,7 +8,7 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
- const {data} = await client.query({
+ const { data } = await client.query({
    query: gql`
    query NewQuery {
      pages {
@@ -15,7 +17,7 @@ export const getStaticProps = async () => {
        }
      }
    }
-   `
+`
  })
   return {
     props: {

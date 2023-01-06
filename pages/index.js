@@ -1,3 +1,5 @@
+import client from "client";
+
 export default function Home(props) {
   console.log("PROPS: ", props);
   return <div>Next JS &amp; WordPress course. Test</div>;
